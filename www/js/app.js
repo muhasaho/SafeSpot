@@ -25,8 +25,8 @@ angular.module('starter', ['ionic'])
     showDelete: false
   };
   
-  $scope.edit = function(item) {
-    alert('Edit Item: ' + item.id);
+  $scope.deleteItem = function(item) {
+    $scope.items.splice($scope.items.indexOf(item), 1);
   };
   $scope.share = function(item) {
     alert('Share Item: ' + item.id);
@@ -40,17 +40,27 @@ angular.module('starter', ['ionic'])
   $scope.onItemDelete = function(item) {
     $scope.items.splice($scope.items.indexOf(item), 1);
   };
+
+  $scope.guageColor = function(item){
+    if (item.crimeIndex <= 3){
+      return "balanced";
+    }
+    else if (item.crimeIndex > 3 && item.crimeIndex <= 7){
+      return "energized";
+    }
+    else{
+      return "assertive";
+    }
+  }
   
   $scope.items = [
-    { id: 0 },
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-    { id: 5 },
-    { id: 6 },
-    { id: 7 },
-    { id: 8 }
+    { id: 0, name: "Bicycle", crimeIndex: 2 },
+    { id: 1, name: "Auto", crimeIndex: 0 },
+    { id: 2, name: "Drugs", crimeIndex: 4 },
+    { id: 3, name: "Disturbance", crimeIndex: 8 },
+    { id: 4, name: "Assault", crimeIndex: 2 },
+    { id: 5, name: "Animal", crimeIndex: 3 },
+    { id: 6, name: "Burglary", crimeIndex: 6 }
   ];
   
 });

@@ -39,17 +39,18 @@
           
         <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
 
-        <ion-item ng-repeat="item in items" 
-                  item="item"
-                  href="#/item/{{item.id}}">
-          Item {{ item.id }}
-          <span class="badge badge-assertive">0</span>
+        <ion-item class="item item-thumbnail-left" ng-repeat="item in items" 
+          item="item"
+          href="#/item/{{item.id}}">
+          <img src="img/thumb.png">
+          <h2>{{ item.name }}</h2>
+          <span class="badge badge-{{ guageColor(item) }}">{{ item.crimeIndex }}</span>
           <ion-delete-button class="ion-minus-circled" 
                              ng-click="onItemDelete(item)">
           </ion-delete-button>
           <ion-option-button class="button-assertive"
-                             ng-click="edit(item)">
-            Edit
+                             ng-click="deleteItem(item)">
+            Remove
           </ion-option-button>
           <ion-option-button class="button-calm"
                              ng-click="share(item)">
