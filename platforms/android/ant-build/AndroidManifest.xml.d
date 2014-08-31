@@ -1,2 +1,2 @@
-/Users/saho/dev/safeSpot/platforms/android/ant-build/AndroidManifest.xml : \
-/Users/saho/dev/safeSpot/platforms/android/AndroidManifest.xml \
+D:\DEV\ionic\SafeSpot\platforms\android\ant-build\AndroidManifest.xml : \
+D:\DEV\ionic\SafeSpot\platforms\android\AndroidManifest.xml \

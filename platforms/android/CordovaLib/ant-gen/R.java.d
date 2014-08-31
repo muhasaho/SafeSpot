@@ -1,1 +1,1 @@
- : /Users/saho/dev/safeSpot/platforms/android/CordovaLib/ant-build/AndroidManifest.xml \
+ : D:\DEV\ionic\SafeSpot\platforms\android\CordovaLib\ant-build\AndroidManifest.xml \
