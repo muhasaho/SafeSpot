@@ -22,7 +22,8 @@ angular.module('starter', ['ionic'])
 .controller('MyCtrl', function($scope) {
   
   $scope.data = {
-    showDelete: false
+    showDelete: false,
+    showReorder: false
   };
   
   $scope.deleteItem = function(item) {
